@@ -8,6 +8,7 @@ This project started as a way to represent the use of vectors with a simple coll
 * Create a “true” 8-ball game mode - once the collision bug is fixed
 * Create more interesting levels
 * Create past-level playability - there is some code for this now but it doesn't work
+* Add a level win animation/message or something
 
 # A Project Review 2023
 The file called project review was a review of the development for the project as part of the Honors Enrichment Contract this project stemmed from. I included this in the repo because I think it sheds light on why the code is structured the way it is: why use pack, variable names, ect. I think the code could be rewritten in a much more efficient and elegant manner to address the now 8-ball style of the game.

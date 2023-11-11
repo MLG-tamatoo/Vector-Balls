@@ -1,0 +1,21 @@
+"""Do Not Edit File, it is an example of how the data/level json is set up and therefore parsed"""
+
+{
+    "level_1": {
+        "balls": [[400, 200]],
+        "pockets": [[400, 300]],
+        "cueball": [400, 300]
+    },
+    "level_2": {
+        "balls": [[200, 200]],
+        "pockets": [[400, 300]],
+        "cueball": [400, 300]
+    },
+    "level_3": {
+        "balls": [[600, 200]],
+        "pockets": [[400, 300]],
+        "cueball": [400, 300]
+    },
+    "player_score": 0,
+    "max_level": 1
+}

@@ -1,13 +1,12 @@
 #*******************
 """
 Author:Connor Owens
-Date:November 2023
 Project: MAT 267 Honors Enrichment Project
 Description: create all of the custom classes that will be 
 used in the project.
 """
-#*******************z
-
+#*******************
+import random
 import math
 class Vector:
     #vector class to modulatize/object orient the code better
@@ -15,9 +14,11 @@ class Vector:
         #goes through the components and adds up their squares, sum of squares
         self.magnitude = magnitude
         self.angle = angle*(math.pi/180)
-        self.components = [magnitude*math.cos(angle), magnitude*math.sin(angle)]
+        angle = self.angle
+        x = magnitude*math.cos(angle)
+        y = magnitude*math.sin(angle)
+        self.components = [x, y]
         
-
 class Coords:
     def __init__(self, cords_list):
         self.x = cords_list[0]
@@ -31,6 +32,7 @@ class Sim_Object:
         self.tk_info = tk_info
         self.coords = coords
         self.object_color = object_color
+        self.cue = cue
         #we will use axial velocities as components and go from there
         #we could do an angle method but that's really complex and I wanna get this going
 
@@ -40,4 +42,10 @@ class Sim_Object:
 
     def Update(self, coords, magnitude, angle):
         self.coords = coords
-        self.velocity_vector = Vector(magnitude, angle*(math.pi/180))
+        self.velocity_vector = Vector(magnitude, angle)
+
+class Pocket:
+    def __init__(self, tk_info, coords, color):
+        self.tk_info = tk_info
+        self.coords = coords
+        self.color = color
